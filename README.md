@@ -8,8 +8,10 @@ This plugin autocompletes email addresses when supplied with an email domain.  I
 ## To use this plugin, download the file and on pageload, call:
 
 ```javascript
-$('#your-field').autoEmail("yourdomain.com");
+$('#your-field').autoEmail(["gmail.com", "yahoo.com", "aol.com", "ymail.com", "anything.com"]);
 ```
+
+The library will give preference to the entry that comes first in the array. IE btholt@y will autocomplete to yahoo.com first, but after typing ym will autocomplete to ymail.com.
 
 ##### This is in early development, so it's not perfect.
 
