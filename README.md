@@ -12,3 +12,8 @@ $('#your-field').autoEmail("yourdomain.com");
 ```
 
 ##### This is in early development, so it's not perfect.
+
+## Edits by [@holtbt](http://www.twitter.com/holtbt)
+
+- Removed the functionality for semicolons and commas. This is intended for email input fields.
+- Added the ability to accept an array of domains.
