@@ -25,6 +25,10 @@
         var email = $(this).val().trim();
         var len = email.length;
         var myDomainArray = email.split("@");
+        console.log(myDomainArray);
+        if (len <= 1  || myDomainArray.length !== 2 || myDomainArray[0] === "") {
+          return;
+        }
         var myDomain = myDomainArray[myDomainArray.length - 1];
         var matches = $.grep(domains, function(el, index) {
           // First part of myDomain should match first part of domain
