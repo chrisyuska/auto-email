@@ -13,9 +13,7 @@ $('#your-field').autoEmail(["gmail.com", "yahoo.com", "aol.com", "ymail.com", "a
 
 The library will give preference to the entry that comes first in the array. IE btholt@y will autocomplete to yahoo.com first, but after typing ym will autocomplete to ymail.com.
 
-##### This is in early development, so it's not perfect.
+## Credits
 
-## Edits by [@holtbt](http://www.twitter.com/holtbt)
-
-- Removed the functionality for semicolons and commas. This is intended for email input fields.
-- Added the ability to accept an array of domains.
+- Original created by [@chrisyuska](https://github.com/chrisyuska)
+- Forked and maintained by [@btholt](https://github.com/btholt)
