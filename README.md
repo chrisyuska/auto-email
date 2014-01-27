@@ -15,6 +15,7 @@ http://jsfiddle.net/MauH7/
 $('#your-field').autoEmail("yourdomain.com", false);
 ```
 
-`domain` is the domain to use. `multi` is a boolean that allows or disallows the user to append multiple emails separated by a `,` or `:`.
+The method accepts two parameters, `domain` and `multi-enabled`.
 
-##### This is in early development, so it's not perfect.
+* `domain` is the domain to use for autocompletion
+* `multi-enabled` is a boolean flag that enables the user to enter multiple emails in the field, separated by a `,` or `;`
