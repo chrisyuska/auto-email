@@ -1,6 +1,6 @@
 (function( $ ){
 
-  $.fn.autoEmail = function( domain ) {
+  $.fn.autoEmail = function( domain, multi ) {
 
     return this.each(function() {
 
@@ -15,7 +15,7 @@
           //add comma and space after enter is pressed
           var emails = $(this).val().trim().split(/,\s*|;\s*/);
           var email = emails[emails.length-1];
-          if ($this.val().length > 0 && $this.val().trim()[$this.val().trim().length-1] != "," && email.match(/.+@.+\..+/)) {
+          if (multi && $this.val().length > 0 && $this.val().trim()[$this.val().trim().length-1] != "," && email.match(/.+@.+\..+/)) {
             if (keyCode == 59) {
               $this.val($this.val()+"; ");
             } else {
