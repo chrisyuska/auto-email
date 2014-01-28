@@ -7,15 +7,21 @@ This plugin autocompletes email addresses when supplied with an email domain.  I
 
 ### Demo
 
-http://jsfiddle.net/MauH7/
+http://jsfiddle.net/T45pw/
 
-## To use this plugin, download the file and on pageload, call:
+### To use this plugin, download the file and on pageload, call:
 
 ```javascript
-$('#your-field').autoEmail("yourdomain.com", false);
+$('#your-field').autoEmail(["gmail.com", "foo.org", "foo.com", "foobar.com"], false);
 ```
 
-The method accepts two parameters, `domain` and `multi-enabled`.
+The method accepts two parameters, `domains` and `multi-enabled`.
 
-* `domain` is the domain to use for autocompletion
+* `domains` is an array of domains to autocomplete with, autocompleting on the first match in the array.  Typing `joe@f` in the above example will first autocomplete to `joe@foo.org`.  After the user types `joe@foob`, the field will autocomplete to `joe@foobar.com`.
 * `multi-enabled` is a boolean flag that enables the user to enter multiple emails in the field, separated by a `,` or `;`
+
+### Credits
+
+- Original created by [@chrisyuska](https://github.com/chrisyuska)
+- Contributed to by [@btholt](https://github.com/btholt) and [@peterfarrell](https://github.com/peterfarrell)
+
