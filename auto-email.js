@@ -1,6 +1,6 @@
 (function( $ ){
 
-  $.fn.autoEmail = function( domains, multi ) {
+  $.fn.autoEmail = function( domains, multi, startAutoCompleteAfterFirstDomainCharacterIsTyped ) {
 
     return this.each(function() {
 
@@ -67,6 +67,9 @@
         // get substring to try appending with autocomplete email
         var emailsDirty = $(this).val().substr(0, selStart).split("@");
         if (emailsDirty.length < 2 || emailsDirty[0] == "") {
+          return;
+        }
+        if (startAutoCompleteAfterFirstDomainCharacterIsTyped && emailsDirty[1] == "") {
           return;
         }
         var emailDomain = emailsDirty[emailsDirty.length - 1];
